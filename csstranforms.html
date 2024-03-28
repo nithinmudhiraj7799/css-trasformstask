@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+          .a{    border:2px solid; 
+                 display:grid;
+                 justify-content:center;
+                 align-items:center;
+                 margin-top:100px;
+                 margin-left:100px;
+                 background-image:linear-gradient(red,yellow);
+                 height:100px;
+                 width : 100px;
+                 /* transform:translate(110px,110px);
+                 transform:rotate(50deg); */
+                 /* transform:perspective(20px) */
+                 /* transform:skew(18deg) */
+                 /* transform:perspective(200px)  rotatex(60deg)  */
+                }
+            /* input{ transform:rotate(30deg) perspective()} */
+            .a:hover{ transform:rotatex(63deg) perspective(100px) skew(10deg)} 
+            /* input{ transform:rotate(30deg) perspective(150px) skew(110deg)} */
+            input:active ~ .a{ 
+                transform:rotatey(53deg) perspective(120px) skew(110deg)  ;
+            }
+         .b{  border:2px solid;
+              height:100px;
+              width:100px;
+              margin-top:100px;
+              margin-left:100px;
+              background-image:linear-gradient(rgb(0, 255, 76),rgb(12, 44, 224));}
+
+          .b:hover{  transform:rotate(20deg) perspective(200px) skew(30deg) }
+             
+         input:active{ }
+     </style>
+</head>
+<body>
+    <input type="radio"/>
+    <div class="a">
+        nithin</div>
+  
+    <!-- <lable for="int"><div class="a"></div></lable> -->
+    
+    <div class="b">amruth</div>
+    <input type="radio">
+</body>
+</html>
