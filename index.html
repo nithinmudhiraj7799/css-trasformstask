@@ -5,47 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style> 
-          .a{    border:2px solid; 
+          .a{    background-color: rgb(21, 21, 182);
+                 border:2px solid; 
+                 border-radius:20px;
                  display:grid;
                  justify-content:center;
                  align-items:center;
-                 margin-top:100px;
-                 margin-left:100px;
+                 margin-bottom:100px;
+                 margin-left:140px;
+                
                  background-image:linear-gradient(red,yellow);
                  height:100px;
                  width : 100px;
-                 /* transform:translate(110px,110px);
-                 transform:rotate(50deg); */
-                 /* transform:perspective(20px) */
-                 /* transform:skew(18deg) */
-                 /* transform:perspective(200px)  rotatex(60deg)  */
-                }
-            /* input{ transform:rotate(30deg) perspective()} */
-            .a:hover{ transform:rotatex(63deg) perspective(100px) skew(10deg)} 
-            /* input{ transform:rotate(30deg) perspective(150px) skew(110deg)} */
-            input:active ~ .a{ 
-                transform:rotatey(53deg) perspective(120px) skew(110deg)  ;
-            }
-         .b{  border:2px solid;
-              height:100px;
-              width:100px;
-              margin-top:100px;
-              margin-left:100px;
-              background-image:linear-gradient(rgb(0, 255, 76),rgb(12, 44, 224));}
+                 box-shadow:0px 0px 10px 10px rgb(147, 199, 176);
 
-          .b:hover{  transform:rotate(20deg) perspective(200px) skew(30deg) }
+
+              
+                }
+      .firstdiv{ background-color: blueviolet;
+                 margin:100px 100px;
+                 border:2px solid;
+                 height:600px;
+                 width:600px;
+                
+             }
+      .seconddiv{ background-image: radial-gradient(red,rgb(222, 5, 175));
+             margin:100px 100px;
+                 border:2px solid;
+                 height:600px;
+                 width:600px;}
+              
+       .a:hover{ transform:rotate(63deg) perspective(200px) skew(40deg);
+                 transition-duration: 1s;}
+
+     p:active .a{transform:rotatey(300deg);
+                 transition-duration: 1s;}
+
+   p:active~ .a{ transform:rotate(360deg);
+                 transition-duration:1s;}          
+
+ .askew:active~ .a{transform:skew(200deg);
+                   transition-duration:1s ;}
+
+ .translate:active~ .a{transform:translate(522px)}
+
+        .scale:active~ .a{transform:scale(1.9)}
+
+        input:active ~ .a{ 
+                 transform:scale(36);
+                 transition-duration: 1s; }
+      
+            .b{ 
+                 display:grid;
+                 justify-content:center;
+                 align-items: center;
+                 border:2px solid;
+                 border-radius:20px;
+                 height:100px;
+                 width:100px;
+                 margin-top:100px;
+                 margin-left:100px;
+                
+                 background-image:linear-gradient(rgb(26, 219, 42),rgb(12, 44, 224));}
+
+       .b:hover{ transform:rotate(100deg);
+                 transition-duration:1s;  }
              
-         input:active{ }
+        
+   .second:active ~ .b{transform:rotatey(360deg);
+                       transition-duration: 1s;}
+     body{background-image:linear-gradient(rgb(243, 13, 74),rgb(12, 44, 224));}}
+
      </style>
 </head>
 <body>
-    <input type="radio"/>
-    <div class="a">
-        nithin</div>
+  <br><br>
+  <hr> <h1 style="text-align: center; background-color: aqua; color:rgb(44, 42, 165)" >css tranforms</h1><hr>
+
+  <div class="firstdiv"> <input type="radio" />
+   
+    <p style="font-size: 30px;">rotate</p>
+    <p class="askew" style="font-size: 30px;">skew</p>
+    <p class="translate"  style="font-size: 30px;">translate</p>
+    <p class="scale" style="font-size: 30px;">scale</p>
+    <div class="a"> nithin</div>
+  </div> 
   
-    <!-- <lable for="int"><div class="a"></div></lable> -->
-    
-    <div class="b">amruth</div>
-    <input type="radio">
+
+
+   <div class="seconddiv">
+     <input class="second" type="radio"> 
+     <div class="b">amruth</div>
+ </div>
 </body>
 </html>
